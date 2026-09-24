@@ -3,17 +3,7 @@ import 'dart:math';
 import 'package:offline_outbox/offline_outbox.dart';
 import 'package:test/test.dart';
 
-/// A Random that always returns the same double.
-class FixedRandom implements Random {
-  FixedRandom(this.value);
-  final double value;
-  @override
-  double nextDouble() => value;
-  @override
-  int nextInt(int max) => (value * max).floor();
-  @override
-  bool nextBool() => value >= 0.5;
-}
+import 'harness.dart';
 
 void main() {
   group('ExponentialBackoff', () {
