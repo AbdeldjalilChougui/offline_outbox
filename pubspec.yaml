@@ -1,0 +1,23 @@
+name: offline_outbox
+description: >-
+  Reliable, storage-agnostic outbox for offline-first Dart and Flutter apps:
+  queue mutations offline, then deliver them in order with retries, backoff,
+  coalescing and conflict handling.
+version: 0.1.0
+homepage: https://abdeldjalilchougui.biz/
+repository: https://github.com/AbeldjalilChougui/offline_outbox
+issue_tracker: https://github.com/AbeldjalilChougui/offline_outbox/issues
+topics:
+  - offline
+  - sync
+  - queue
+  - retry
+  - offline-first
+
+environment:
+  sdk: ^3.5.0
+
+dev_dependencies:
+  fake_async: ^1.3.1
+  lints: ^6.0.0
+  test: ^1.25.0
