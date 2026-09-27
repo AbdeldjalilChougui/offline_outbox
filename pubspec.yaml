@@ -5,8 +5,8 @@ description: >-
   coalescing and conflict handling.
 version: 0.1.0
 homepage: https://abdeldjalilchougui.biz/
-repository: https://github.com/AbeldjalilChougui/offline_outbox
-issue_tracker: https://github.com/AbeldjalilChougui/offline_outbox/issues
+repository: https://github.com/AbdeldjalilChougui/offline_outbox
+issue_tracker: https://github.com/AbdeldjalilChougui/offline_outbox/issues
 topics:
   - offline
   - sync
