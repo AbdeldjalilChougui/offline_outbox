@@ -1,4 +1,4 @@
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/sync_outbox.dart';
 import 'package:test/test.dart';
 
 import 'harness.dart';

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/sync_outbox.dart';
 
 /// Builds outboxes against a manual clock and a scripted sender.
 class Harness {

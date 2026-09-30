@@ -4,7 +4,7 @@ library;
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:offline_outbox/io.dart';
+import 'package:sync_outbox/io.dart';
 import 'package:test/test.dart';
 
 import 'store_contract.dart';

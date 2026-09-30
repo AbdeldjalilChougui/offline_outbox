@@ -1,9 +1,9 @@
-// A runnable tour of offline_outbox with a simulated flaky server.
+// A runnable tour of sync_outbox with a simulated flaky server.
 //
 // Run with: dart run example/main.dart
 import 'dart:async';
 
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/sync_outbox.dart';
 
 /// Pretends to be a REST API: the first attempt at each entry times out,
 /// and editing note 2 conflicts once with a newer server version.

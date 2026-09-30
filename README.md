@@ -1,9 +1,9 @@
-# offline_outbox
+# sync_outbox
 
 A reliable, storage-agnostic outbox for offline-first Dart and Flutter apps. Your app
 queues mutations while offline, and the outbox delivers them later, safely and in order.
 
-[![pub package](https://img.shields.io/pub/v/offline_outbox.svg)](https://pub.dev/packages/offline_outbox)
+[![pub package](https://img.shields.io/pub/v/sync_outbox.svg)](https://pub.dev/packages/sync_outbox)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Features
@@ -43,14 +43,14 @@ queues mutations while offline, and the outbox delivers them later, safely and i
 ## Install
 
 ```sh
-dart pub add offline_outbox
+dart pub add sync_outbox
 ```
 
 ## Usage
 
 ```dart
-import 'package:offline_outbox/io.dart'; // JsonFileOutboxStore (not on the web)
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/io.dart'; // JsonFileOutboxStore (not on the web)
+import 'package:sync_outbox/sync_outbox.dart';
 
 /// Maps your HTTP client's answers onto SendResult.
 Future<SendResult> send(OutboxEntry e) async {
@@ -202,7 +202,7 @@ Automatic flushes report failures as `OutboxFlushFailed` events, never as stream
 import 'dart:math';
 
 import 'package:fake_async/fake_async.dart';
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/sync_outbox.dart';
 
 void example() {
   fakeAsync((async) {
@@ -243,7 +243,7 @@ per entry: the `id` as primary key, the `sequence` for ordering, and
 
 - **`InMemoryOutboxStore`** is for tests and for queues that do not need to survive a
   restart.
-- **`JsonFileOutboxStore`** comes from `package:offline_outbox/io.dart`. On each commit it
+- **`JsonFileOutboxStore`** comes from `package:sync_outbox/io.dart`. On each commit it
   writes `<path>.tmp`, flushes it, and renames it over the file, so a crash leaves either
   the old file or the new one, never a torn file. It suits queues of up to a few thousand
   entries.
@@ -257,7 +257,7 @@ database.
 import 'dart:convert';
 
 import 'package:drift/drift.dart';
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/sync_outbox.dart';
 
 part 'drift_outbox_store.g.dart';
 

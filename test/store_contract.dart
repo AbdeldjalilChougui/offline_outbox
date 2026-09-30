@@ -1,4 +1,4 @@
-import 'package:offline_outbox/offline_outbox.dart';
+import 'package:sync_outbox/sync_outbox.dart';
 import 'package:test/test.dart';
 
 OutboxEntry entry(String id, {int seq = 0, OutboxState? state}) => OutboxEntry(

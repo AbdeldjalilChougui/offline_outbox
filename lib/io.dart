@@ -1,4 +1,4 @@
-/// File-based storage for `offline_outbox`, for platforms with `dart:io`
+/// File-based storage for `sync_outbox`, for platforms with `dart:io`
 /// (mobile, desktop, server). Not available on the web.
 library;
 
